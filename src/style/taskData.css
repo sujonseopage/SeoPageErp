@@ -1,0 +1,230 @@
+.draggable-column-header {
+	cursor: grab;
+}
+
+.draggable-column-header:active {
+	cursor: grabbing;
+}
+
+.glassy-ash-background {
+	background-color: #d3d3d3;
+}
+
+.custom-modal {
+	max-width: none;
+	width: auto;
+	height: 100%;
+	margin: 1.75rem auto;
+	overflow-x: auto;
+
+	position: relative;
+}
+
+.custom-modal .modal-dialog {
+	max-width: none;
+	width: auto;
+	height: 100%;
+	max-width: none;
+}
+
+.modal-content {
+	overflow-x: auto;
+	border: none;
+	
+}
+
+.cell_data:hover {
+	/* background-color: rgb(223, 218, 218); */
+	background-color: green;
+	font-weight: 500;
+	transition: all;
+}
+
+/* Table styling  */
+
+/* Style for the entire table */
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 16px;
+}
+
+/* Style for table header */
+th {
+	background-color: #f2f2f2;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;
+	border: 1px solid #ddd;
+}
+
+/* Style for table body */
+td {
+	text-align: center;
+	padding: 10px;
+	border: 1px solid #ddd;
+}
+
+/* Blue div's css  */
+.blue-divs-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.row {
+	display: flex;
+}
+
+.blue-div {
+	width: 200px;
+	height: 80px;
+	background: rgb(71, 71, 241);
+	padding: 10px;
+	margin: 5px;
+	cursor: pointer;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+
+}
+.blue-div:hover{
+	background-color: blue;
+}
+
+.active-cell {
+	background-color: rgb(165, 165, 238);
+}
+
+.task-purpose {
+	background: green;
+	color: black;
+	position: absolute;
+	bottom: -30px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 5px;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+// Add this CSS to your stylesheet or inline style
+.table-container {
+	/* Add this if you want to center the table within its container */
+	display: flex;
+	justify-content: center;
+}
+
+.table-container table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.table-container th,
+.table-container td {
+	border: 1px solid #ddd;
+	padding: 10px;
+}
+
+/* .table-container tr:nth-child(even) {
+	background-color: #f2f2f2; /* Light gray for even rows */
+/* } */
+
+/* .table-container tr:nth-child(odd) {
+	background-color: #b3e0ff; /* Light blue for odd rows */
+/* } */
+*/ */ .even-row {
+	background-color: #b3e0ff; /* Light blue for even rows */
+}
+
+.odd-row {
+	background-color: #f2f2f2; /* Light gray for odd rows */
+}
+
+.manager-info-line {
+	display: flex;,
+	flex-direction: column;
+	justify-content:center;
+	
+}
+
+.manager-info-line:nth-child(1) {
+	// Styles for the first line
+	background-color: #eaf7ff;
+}
+
+.manager-info-line:nth-child(2) {
+	// Styles for the second line
+	background-color: #f9f9f9; /* Example background color */
+}
+
+.manager-info-line:nth-child(3) {
+	// Styles for the third line
+	background-color: #ffe5e5; /* Example background color */
+}
+
+.manager-info-title {
+	font-size: 1.5rem; /* Adjust as needed */
+	font-weight: 800;
+	
+	
+}
+
+.manager-info-value {
+	font-size: 1.3rem; /* Adjust as needed */
+	margin-left: 5px;
+	font-weight: 500;
+	padding-top: 4px;
+	
+}
+
+
+.show_hide_div:hover{
+	text-decoration: underline;
+	color: blue;
+	font-weight: 400;
+	
+}
+
+.show_hide_button:hover {
+	background-color: blue;
+	border: none;
+	outline: none;
+}
+
+.project-manager-info{
+	box-shadow: 4px 4px 6px -2px rgba(0,0,0,0.55);
+	-webkit-box-shadow: 4px 4px 6px -2px rgba(0,0,0,0.55);
+	-moz-box-shadow: 4px 4px 6px -2px rgba(0,0,0,0.55);
+	border-radius: 10px;
+	
+}
+
+.project-manager-info1 {
+	box-shadow: 4px 4px 6px -2px rgba(0,0,0,0.55);
+	-webkit-box-shadow: 4px 4px 6px -2px rgba(0,0,0,0.55);
+	-moz-box-shadow: 4px 4px 6px -2px rgba(0,0,0,0.55);
+	border-radius: 10px;
+	width: 700px;
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	
+}
+
+.main-header-info {
+	box-shadow: 4px 4px 6px -2px rgba(0,0,0,0.55);
+	-webkit-box-shadow: 4px 4px 6px -2px rgba(0,0,0,0.55);
+	-moz-box-shadow: 4px 4px 6px -2px rgba(0,0,0,0.55);
+	position: relative;
+	max-width: 700px;
+	border-radius: 10px;
+	
+}
+
+
+
+
