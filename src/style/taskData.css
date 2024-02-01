@@ -33,12 +33,12 @@
 	
 }
 
-.cell_data:hover {
+/* .cell_data:hover {
 	/* background-color: rgb(223, 218, 218); */
-	background-color: green;
+	/* background-color: green;
 	font-weight: 500;
-	transition: all;
-}
+	transition: all; */
+/* } */ */
 
 /* Table styling  */
 
@@ -54,15 +54,16 @@ th {
 	background-color: #f2f2f2;
 	font-weight: bold;
 	text-align: center;
-	padding: 10px;
+	padding: 0 5px 0 5px;
 	border: 1px solid #ddd;
 }
 
 /* Style for table body */
 td {
 	text-align: center;
-	padding: 10px;
+	padding: 0 5px 0 5px;
 	border: 1px solid #ddd;
+	
 }
 
 /* Blue div's css  */

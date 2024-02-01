@@ -35,7 +35,9 @@ const DraggableHeader = ({ column, index, moveColumn }) => {
 
 				background: " rgb(71, 71, 241)",
 				color: "white",
-				paddingRight: "10px",
+				fontSize: "14px",
+				height: "60px",
+				// whiteSpace: "nowrap",
 			}}
 		>
 			{column.Header}
@@ -537,8 +539,25 @@ const TaskData = () => {
 						</div>
 					)}
 				</div>
-				<div style={{ marginTop: "60px" }}>
-					<table className="table table-bordered pt-5 mx-2 mt-50">
+				<div
+					style={{
+						marginTop: "60px",
+
+						// display: "flex",
+						// justifyContent: "center",
+						// alignItems: "center",
+						position: "relative",
+					}}
+				>
+					<table
+						className="table table-bordered pt-5  mt-50"
+						style={{
+							position: "relative",
+							display: "block",
+							marginLeft: "-100px",
+							marginRight: "100px",
+						}}
+					>
 						<thead>
 							<tr
 								style={{
@@ -658,12 +677,13 @@ const TaskData = () => {
 											key={colIndex}
 											className="text-center cell_data"
 											style={{
-												padding: "10px 10px",
+												// padding: "10px 10px",
+												whiteSpace: "nowrap",
 												alignItems: "center",
 												justifyContent: "center",
 												textAlign: "center",
 												verticalAlign: "middle",
-												fontSize: "16px",
+												fontSize: "12px",
 												fontWeight: "500",
 												backgroundColor:
 													rowIndex % 2 === 0
@@ -716,7 +736,7 @@ const TaskData = () => {
 						</tbody>
 					</table>
 
-					<div
+					{/* <div
 						style={{
 							display: "flex",
 							justifyContent: "space-evenly",
@@ -740,7 +760,7 @@ const TaskData = () => {
 							1000
 						</div>
 						<span>More Rows at the bottom</span>
-					</div>
+					</div> */}
 
 					{/* Modal to show column inner information */}
 

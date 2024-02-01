@@ -116,8 +116,9 @@ const TableData = ({ columnName }) => {
 			<thead>
 				<tr
 					style={{
-						fontSize: "15px",
-						padding: "10px",
+						fontSize: "14px",
+						width: "auto",
+						// padding: "10px",
 						margin: "0",
 						alignItems: "center",
 						textAlign: "center",
@@ -143,7 +144,7 @@ const TableData = ({ columnName }) => {
 					<tr
 						key={rowIndex}
 						style={{
-							padding: "5px",
+							// padding: "5px",
 							alignItems: "center",
 							textAlign: "center",
 							verticalAlign: "middle",
@@ -153,12 +154,16 @@ const TableData = ({ columnName }) => {
 							<td
 								key={column}
 								style={{
-									padding: "10px 10px",
+									// padding: "10px 10px",
 									alignItems: "center",
 									justifyContent: "center",
 									textAlign: "center",
 									verticalAlign: "middle",
-									fontSize: "16px",
+									fontSize: "12px",
+									whiteSpace: "nowrap",
+									padding: "10px",
+
+									// fontSize: "16px",
 									fontWeight: "500",
 									backgroundColor:
 										rowIndex % 2 === 0
