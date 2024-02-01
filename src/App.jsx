@@ -9,7 +9,7 @@ const App = () => {
 			className="mt-6"
 			style={{
 				background: "white ",
-				overflowX: "scroll",
+				width: "100%",
 			}}
 		>
 			<BrowserRouter>

@@ -70,6 +70,7 @@ td {
 .blue-divs-container {
 	display: flex;
 	flex-direction: column;
+	margin-left: 20px;
 }
 
 .row {
@@ -78,9 +79,9 @@ td {
 
 .blue-div {
 	width: 200px;
-	height: 80px;
+	height: 70px;
 	background: rgb(71, 71, 241);
-	padding: 10px;
+	padding: 5px;
 	margin: 5px;
 	cursor: pointer;
 	color: white;

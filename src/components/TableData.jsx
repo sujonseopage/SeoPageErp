@@ -112,85 +112,113 @@ const TableData = ({ columnName }) => {
 	};
 
 	return (
-		<table style={{ marginTop: "80px" }}>
-			<thead>
-				<tr
+		<div
+			style={{
+				marginTop: "50px",
+
+				padding: "10px",
+				// width: "100%",
+				height: "400px",
+				position: "relative",
+				overflowY: "scroll",
+				// overflow: "hidden",
+			}}
+		>
+			<div
+			// style={{
+			// 	position: "relative",
+			// 	display: "block",
+			// 	height: "auto",
+			// 	// overflow: "auto",
+			// 	overflowY: "auto",
+			// }}
+			>
+				<table
 					style={{
-						fontSize: "14px",
-						width: "auto",
-						// padding: "10px",
-						margin: "0",
-						alignItems: "center",
-						textAlign: "center",
-						verticalAlign: "middle",
+						position: "relative",
+						display: "block",
+						overflow: "auto",
 					}}
 				>
-					{displayColumns.map((column) => (
-						<th
-							key={column}
+					<thead>
+						<tr
 							style={{
-								background: "rgb(71, 71, 241)",
-								color: "white",
-								fontWeight: "700",
+								fontSize: "14px",
+								width: "auto",
+								// padding: "10px",
+								alignItems: "center",
+								textAlign: "center",
+								verticalAlign: "middle",
 							}}
 						>
-							{columnsMapping[column]}
-						</th>
-					))}
-				</tr>
-			</thead>
-			<tbody>
-				{data.map((row, rowIndex) => (
-					<tr
-						key={rowIndex}
-						style={{
-							// padding: "5px",
-							alignItems: "center",
-							textAlign: "center",
-							verticalAlign: "middle",
-						}}
-					>
-						{displayColumns.map((column) => (
-							<td
-								key={column}
+							{displayColumns.map((column) => (
+								<th
+									key={column}
+									style={{
+										background: "rgb(71, 71, 241)",
+										color: "white",
+										fontWeight: "700",
+									}}
+								>
+									{columnsMapping[column]}
+								</th>
+							))}
+						</tr>
+					</thead>
+					<tbody>
+						{data.map((row, rowIndex) => (
+							<tr
+								key={rowIndex}
 								style={{
-									// padding: "10px 10px",
+									// padding: "5px",
 									alignItems: "center",
-									justifyContent: "center",
 									textAlign: "center",
 									verticalAlign: "middle",
-									fontSize: "12px",
-									whiteSpace: "nowrap",
-									padding: "10px",
-
-									// fontSize: "16px",
-									fontWeight: "500",
-									backgroundColor:
-										rowIndex % 2 === 0
-											? "white"
-											: "#d1d4fb",
 								}}
 							>
-								{" "}
-								{column.includes("link") &&
-								typeof row[column] === "string" &&
-								row[column].startsWith("http") ? (
-									<a
-										href={row[column]}
-										target="_blank"
-										rel="noopener noreferrer"
+								{displayColumns.map((column) => (
+									<td
+										key={column}
+										style={{
+											// padding: "10px 10px",
+											alignItems: "center",
+											justifyContent: "center",
+											textAlign: "center",
+											verticalAlign: "middle",
+											fontSize: "12px",
+											whiteSpace: "nowrap",
+											padding: "10px",
+
+											// fontSize: "16px",
+											fontWeight: "500",
+											backgroundColor:
+												rowIndex % 2 === 0
+													? "white"
+													: "#d1d4fb",
+										}}
 									>
-										{truncate(row[column], 30)}
-									</a>
-								) : (
-									row[column]
-								)}
-							</td>
+										{" "}
+										{column.includes("link") &&
+										typeof row[column] === "string" &&
+										row[column].startsWith("http") ? (
+											<a
+												href={row[column]}
+												target="_blank"
+												rel="noopener noreferrer"
+											>
+												{truncate(row[column], 30)}
+											</a>
+										) : (
+											row[column]
+										)}
+									</td>
+								))}
+							</tr>
 						))}
-					</tr>
-				))}
-			</tbody>
-		</table>
+					</tbody>
+				</table>
+			</div>
+		</div>
 	);
 };
 

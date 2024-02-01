@@ -37,6 +37,7 @@ const DraggableHeader = ({ column, index, moveColumn }) => {
 				color: "white",
 				fontSize: "14px",
 				height: "60px",
+
 				// whiteSpace: "nowrap",
 			}}
 		>
@@ -471,10 +472,10 @@ const TaskData = () => {
 
 	return (
 		<DndProvider backend={HTML5Backend}>
-			<div className=" container mt-4 position-relative">
+			<div className="  mt-4 " style={{ width: "100%" }}>
 				<div
 					className=" text-center main-header-info"
-					style={{ top: "0", left: "30%", display: "block" }}
+					style={{ top: "0", left: "20%", display: "block" }}
 				>
 					<p style={{ fontSize: "35px", fontWeight: "600" }}>
 						Total Project: 63
@@ -541,12 +542,14 @@ const TaskData = () => {
 				</div>
 				<div
 					style={{
-						marginTop: "40px",
+						marginTop: "10px",
 
 						// display: "flex",
 						// justifyContent: "center",
 						// alignItems: "center",
 						position: "relative",
+						overflow: "hidden",
+						padding: "20px",
 					}}
 				>
 					<table
@@ -554,8 +557,8 @@ const TaskData = () => {
 						style={{
 							position: "relative",
 							display: "block",
-							marginLeft: "-100px",
-							marginRight: "100px",
+
+							overflow: "auto",
 						}}
 					>
 						<thead>
@@ -711,21 +714,10 @@ const TaskData = () => {
 													? "table-cell"
 													: "none",
 											}}
-											onClick={(e) => {
-												const rect =
-													e.currentTarget.getBoundingClientRect();
-												setModalPosition({
-													top:
-														rect.bottom +
-														window.scrollY,
-													left:
-														rect.left +
-														window.scrollX,
-												});
-
-												setIsHovered(true);
+											onClick={() => {
 												setHoveredData([row, column]);
 												setManagerInfo([row, column]);
+												handleModalOpen();
 											}}
 										>
 											{row[column.accessor]}
@@ -764,7 +756,7 @@ const TaskData = () => {
 
 					{/* Modal to show column inner information */}
 
-					{isHovered && (
+					{/* {isHovered && (
 						<div
 							className="position-absolute p-1 mb-2 bg-white rounded shadow-sm"
 							style={{
@@ -775,7 +767,7 @@ const TaskData = () => {
 								top: modalPosition.top,
 								left: modalPosition.left,
 							}}
-							onClick={handleModalOpen}
+							// onClick={handleModalOpen}
 						>
 							<PiSquaresFourLight
 								style={{ color: "green", fontSize: "25px" }}
@@ -802,7 +794,7 @@ const TaskData = () => {
 								}}
 							/>
 						</div>
-					)}
+					)} */}
 				</div>
 				{/* Render the DataTableModal component if the modal is visible */}
 				{isModalVisible && (
