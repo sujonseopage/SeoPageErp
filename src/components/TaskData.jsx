@@ -486,7 +486,7 @@ const TaskData = () => {
 				{/* Mobile-friendly menu bar for column visibility */}
 				<div
 					className="position-fixed end-0 p-2 "
-					style={{ top: "4%" }}
+					style={{ top: "4%", zIndex: "2" }}
 				>
 					{/* Mobile-friendly menu bar for column visibility */}
 					<Button
@@ -541,7 +541,7 @@ const TaskData = () => {
 				</div>
 				<div
 					style={{
-						marginTop: "60px",
+						marginTop: "40px",
 
 						// display: "flex",
 						// justifyContent: "center",
